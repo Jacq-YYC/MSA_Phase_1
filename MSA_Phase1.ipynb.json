@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 264,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -24,7 +24,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 265,
    "metadata": {},
    "outputs": [
     {
@@ -183,7 +183,7 @@
        "4           33           30           21         33  Clover Park  "
       ]
      },
-     "execution_count": 2,
+     "execution_count": 265,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -195,7 +195,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 266,
    "metadata": {},
    "outputs": [
     {
@@ -219,7 +219,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 3,
+     "execution_count": 266,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -230,16 +230,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 34,
+   "execution_count": 267,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "(1051, 16)"
+       "(1051, 15)"
       ]
      },
-     "execution_count": 34,
+     "execution_count": 267,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -250,7 +250,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 80,
+   "execution_count": 268,
    "metadata": {},
    "outputs": [
     {
@@ -276,7 +276,6 @@
        "      <th></th>\n",
        "      <th>Bedrooms</th>\n",
        "      <th>Bathrooms</th>\n",
-       "      <th>Land area</th>\n",
        "      <th>CV</th>\n",
        "      <th>Latitude</th>\n",
        "      <th>Longitude</th>\n",
@@ -287,7 +286,6 @@
        "      <th>40-49 years</th>\n",
        "      <th>50-59 years</th>\n",
        "      <th>60+ years</th>\n",
-       "      <th>C18_CURPop</th>\n",
        "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
@@ -295,12 +293,10 @@
        "      <th>count</th>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1049.000000</td>\n",
-       "      <td>1051.000000</td>\n",
        "      <td>1.051000e+03</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1.051000e+03</td>\n",
-       "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
@@ -312,7 +308,6 @@
        "      <th>mean</th>\n",
        "      <td>3.777355</td>\n",
        "      <td>2.073403</td>\n",
-       "      <td>856.989534</td>\n",
        "      <td>1.387521e+06</td>\n",
        "      <td>-36.893715</td>\n",
        "      <td>174.799325</td>\n",
@@ -323,13 +318,11 @@
        "      <td>24.125595</td>\n",
        "      <td>22.615604</td>\n",
        "      <td>29.360609</td>\n",
-       "      <td>179.914367</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>std</th>\n",
        "      <td>1.169412</td>\n",
        "      <td>0.992985</td>\n",
-       "      <td>1588.156219</td>\n",
        "      <td>1.182939e+06</td>\n",
        "      <td>0.130100</td>\n",
        "      <td>0.119538</td>\n",
@@ -340,13 +333,11 @@
        "      <td>10.942770</td>\n",
        "      <td>10.210578</td>\n",
        "      <td>21.805031</td>\n",
-       "      <td>71.059280</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>min</th>\n",
        "      <td>1.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>40.000000</td>\n",
        "      <td>2.700000e+05</td>\n",
        "      <td>-37.265021</td>\n",
        "      <td>174.317078</td>\n",
@@ -357,13 +348,11 @@
        "      <td>0.000000</td>\n",
        "      <td>0.000000</td>\n",
        "      <td>0.000000</td>\n",
-       "      <td>3.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>25%</th>\n",
        "      <td>3.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>321.000000</td>\n",
        "      <td>7.800000e+05</td>\n",
        "      <td>-36.950565</td>\n",
        "      <td>174.720779</td>\n",
@@ -374,13 +363,11 @@
        "      <td>18.000000</td>\n",
        "      <td>15.000000</td>\n",
        "      <td>18.000000</td>\n",
-       "      <td>138.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>50%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>2.000000</td>\n",
-       "      <td>571.000000</td>\n",
        "      <td>1.080000e+06</td>\n",
        "      <td>-36.893132</td>\n",
        "      <td>174.798575</td>\n",
@@ -391,13 +378,11 @@
        "      <td>24.000000</td>\n",
        "      <td>21.000000</td>\n",
        "      <td>27.000000</td>\n",
-       "      <td>174.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>75%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>3.000000</td>\n",
-       "      <td>825.000000</td>\n",
        "      <td>1.600000e+06</td>\n",
        "      <td>-36.855789</td>\n",
        "      <td>174.880944</td>\n",
@@ -408,13 +393,11 @@
        "      <td>30.000000</td>\n",
        "      <td>27.000000</td>\n",
        "      <td>36.000000</td>\n",
-       "      <td>210.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>max</th>\n",
        "      <td>17.000000</td>\n",
        "      <td>8.000000</td>\n",
-       "      <td>22240.000000</td>\n",
        "      <td>1.800000e+07</td>\n",
        "      <td>-36.177655</td>\n",
        "      <td>175.492424</td>\n",
@@ -425,45 +408,44 @@
        "      <td>114.000000</td>\n",
        "      <td>90.000000</td>\n",
        "      <td>483.000000</td>\n",
-       "      <td>789.000000</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "          Bedrooms    Bathrooms     Land area            CV     Latitude  \\\n",
-       "count  1051.000000  1049.000000   1051.000000  1.051000e+03  1051.000000   \n",
-       "mean      3.777355     2.073403    856.989534  1.387521e+06   -36.893715   \n",
-       "std       1.169412     0.992985   1588.156219  1.182939e+06     0.130100   \n",
-       "min       1.000000     1.000000     40.000000  2.700000e+05   -37.265021   \n",
-       "25%       3.000000     1.000000    321.000000  7.800000e+05   -36.950565   \n",
-       "50%       4.000000     2.000000    571.000000  1.080000e+06   -36.893132   \n",
-       "75%       4.000000     3.000000    825.000000  1.600000e+06   -36.855789   \n",
-       "max      17.000000     8.000000  22240.000000  1.800000e+07   -36.177655   \n",
+       "          Bedrooms    Bathrooms            CV     Latitude    Longitude  \\\n",
+       "count  1051.000000  1049.000000  1.051000e+03  1051.000000  1051.000000   \n",
+       "mean      3.777355     2.073403  1.387521e+06   -36.893715   174.799325   \n",
+       "std       1.169412     0.992985  1.182939e+06     0.130100     0.119538   \n",
+       "min       1.000000     1.000000  2.700000e+05   -37.265021   174.317078   \n",
+       "25%       3.000000     1.000000  7.800000e+05   -36.950565   174.720779   \n",
+       "50%       4.000000     2.000000  1.080000e+06   -36.893132   174.798575   \n",
+       "75%       4.000000     3.000000  1.600000e+06   -36.855789   174.880944   \n",
+       "max      17.000000     8.000000  1.800000e+07   -36.177655   175.492424   \n",
        "\n",
-       "         Longitude           SA1   0-19 years  20-29 years  30-39 years  \\\n",
-       "count  1051.000000  1.051000e+03  1051.000000  1051.000000  1051.000000   \n",
-       "mean    174.799325  7.006319e+06    47.549001    28.963844    27.042816   \n",
-       "std       0.119538  2.591262e+03    24.692205    21.037441    17.975408   \n",
-       "min     174.317078  7.001130e+06     0.000000     0.000000     0.000000   \n",
-       "25%     174.720779  7.004416e+06    33.000000    15.000000    15.000000   \n",
-       "50%     174.798575  7.006325e+06    45.000000    24.000000    24.000000   \n",
-       "75%     174.880944  7.008384e+06    57.000000    36.000000    33.000000   \n",
-       "max     175.492424  7.011028e+06   201.000000   270.000000   177.000000   \n",
+       "                SA1   0-19 years  20-29 years  30-39 years  40-49 years  \\\n",
+       "count  1.051000e+03  1051.000000  1051.000000  1051.000000  1051.000000   \n",
+       "mean   7.006319e+06    47.549001    28.963844    27.042816    24.125595   \n",
+       "std    2.591262e+03    24.692205    21.037441    17.975408    10.942770   \n",
+       "min    7.001130e+06     0.000000     0.000000     0.000000     0.000000   \n",
+       "25%    7.004416e+06    33.000000    15.000000    15.000000    18.000000   \n",
+       "50%    7.006325e+06    45.000000    24.000000    24.000000    24.000000   \n",
+       "75%    7.008384e+06    57.000000    36.000000    33.000000    30.000000   \n",
+       "max    7.011028e+06   201.000000   270.000000   177.000000   114.000000   \n",
        "\n",
-       "       40-49 years  50-59 years    60+ years   C18_CURPop  \n",
-       "count  1051.000000  1051.000000  1051.000000  1051.000000  \n",
-       "mean     24.125595    22.615604    29.360609   179.914367  \n",
-       "std      10.942770    10.210578    21.805031    71.059280  \n",
-       "min       0.000000     0.000000     0.000000     3.000000  \n",
-       "25%      18.000000    15.000000    18.000000   138.000000  \n",
-       "50%      24.000000    21.000000    27.000000   174.000000  \n",
-       "75%      30.000000    27.000000    36.000000   210.000000  \n",
-       "max     114.000000    90.000000   483.000000   789.000000  "
+       "       50-59 years    60+ years  \n",
+       "count  1051.000000  1051.000000  \n",
+       "mean     22.615604    29.360609  \n",
+       "std      10.210578    21.805031  \n",
+       "min       0.000000     0.000000  \n",
+       "25%      15.000000    18.000000  \n",
+       "50%      21.000000    27.000000  \n",
+       "75%      27.000000    36.000000  \n",
+       "max      90.000000   483.000000  "
       ]
      },
-     "execution_count": 80,
+     "execution_count": 268,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -476,13 +458,22 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "#### The original data include 1051 records, with 16 variables. \n",
+    "#### We'll obtain two addional columns as in Section 1. \n",
+    "#### We'll clean, transform the data and modeling in Section 2. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "# 1. Data Collection\n",
     "## 1.1 To get the 2018 Census population"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 269,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -508,7 +499,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 270,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -517,7 +508,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 271,
    "metadata": {
     "scrolled": false
    },
@@ -566,7 +557,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>106 Lawrence Crescent Hill Park, Auckland</td>\n",
-       "      <td>714.0</td>\n",
+       "      <td>714</td>\n",
        "      <td>960000</td>\n",
        "      <td>-37.012920</td>\n",
        "      <td>174.904069</td>\n",
@@ -584,7 +575,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>8 Corsica Way Karaka, Auckland</td>\n",
-       "      <td>564.0</td>\n",
+       "      <td>564</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063672</td>\n",
        "      <td>174.922912</td>\n",
@@ -602,7 +593,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>243 Harbourside Drive Karaka, Auckland</td>\n",
-       "      <td>626.0</td>\n",
+       "      <td>626</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063580</td>\n",
        "      <td>174.924044</td>\n",
@@ -620,7 +611,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>2/30 Hardington Street Onehunga, Auckland</td>\n",
-       "      <td>65.0</td>\n",
+       "      <td>65</td>\n",
        "      <td>740000</td>\n",
        "      <td>-36.912996</td>\n",
        "      <td>174.787425</td>\n",
@@ -638,7 +629,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>59 Israel Avenue Clover Park, Auckland</td>\n",
-       "      <td>601.0</td>\n",
+       "      <td>601</td>\n",
        "      <td>630000</td>\n",
        "      <td>-36.979037</td>\n",
        "      <td>174.892612</td>\n",
@@ -656,12 +647,12 @@
        "</div>"
       ],
       "text/plain": [
-       "   Bedrooms  Bathrooms                                    Address  Land area  \\\n",
-       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland      714.0   \n",
-       "1         5        3.0             8 Corsica Way Karaka, Auckland      564.0   \n",
-       "2         6        4.0     243 Harbourside Drive Karaka, Auckland      626.0   \n",
-       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland       65.0   \n",
-       "4         3        1.0     59 Israel Avenue Clover Park, Auckland      601.0   \n",
+       "   Bedrooms  Bathrooms                                    Address Land area  \\\n",
+       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland       714   \n",
+       "1         5        3.0             8 Corsica Way Karaka, Auckland       564   \n",
+       "2         6        4.0     243 Harbourside Drive Karaka, Auckland       626   \n",
+       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland        65   \n",
+       "4         3        1.0     59 Israel Avenue Clover Park, Auckland       601   \n",
        "\n",
        "        CV   Latitude   Longitude      SA1  0-19 years  20-29 years  \\\n",
        "0   960000 -37.012920  174.904069  7009770          48           27   \n",
@@ -678,7 +669,7 @@
        "4           33           30           21         33  Clover Park  "
       ]
      },
-     "execution_count": 10,
+     "execution_count": 271,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -689,7 +680,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": 272,
    "metadata": {},
    "outputs": [
     {
@@ -711,7 +702,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": 273,
    "metadata": {},
    "outputs": [
     {
@@ -759,7 +750,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>106 Lawrence Crescent Hill Park, Auckland</td>\n",
-       "      <td>714.0</td>\n",
+       "      <td>714</td>\n",
        "      <td>960000</td>\n",
        "      <td>-37.012920</td>\n",
        "      <td>174.904069</td>\n",
@@ -778,7 +769,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>8 Corsica Way Karaka, Auckland</td>\n",
-       "      <td>564.0</td>\n",
+       "      <td>564</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063672</td>\n",
        "      <td>174.922912</td>\n",
@@ -797,7 +788,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>243 Harbourside Drive Karaka, Auckland</td>\n",
-       "      <td>626.0</td>\n",
+       "      <td>626</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063580</td>\n",
        "      <td>174.924044</td>\n",
@@ -816,7 +807,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>2/30 Hardington Street Onehunga, Auckland</td>\n",
-       "      <td>65.0</td>\n",
+       "      <td>65</td>\n",
        "      <td>740000</td>\n",
        "      <td>-36.912996</td>\n",
        "      <td>174.787425</td>\n",
@@ -835,7 +826,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>59 Israel Avenue Clover Park, Auckland</td>\n",
-       "      <td>601.0</td>\n",
+       "      <td>601</td>\n",
        "      <td>630000</td>\n",
        "      <td>-36.979037</td>\n",
        "      <td>174.892612</td>\n",
@@ -854,12 +845,12 @@
        "</div>"
       ],
       "text/plain": [
-       "   Bedrooms  Bathrooms                                    Address  Land area  \\\n",
-       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland      714.0   \n",
-       "1         5        3.0             8 Corsica Way Karaka, Auckland      564.0   \n",
-       "2         6        4.0     243 Harbourside Drive Karaka, Auckland      626.0   \n",
-       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland       65.0   \n",
-       "4         3        1.0     59 Israel Avenue Clover Park, Auckland      601.0   \n",
+       "   Bedrooms  Bathrooms                                    Address Land area  \\\n",
+       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland       714   \n",
+       "1         5        3.0             8 Corsica Way Karaka, Auckland       564   \n",
+       "2         6        4.0     243 Harbourside Drive Karaka, Auckland       626   \n",
+       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland        65   \n",
+       "4         3        1.0     59 Israel Avenue Clover Park, Auckland       601   \n",
        "\n",
        "        CV   Latitude   Longitude      SA1  0-19 years  20-29 years  \\\n",
        "0   960000 -37.012920  174.904069  7009770          48           27   \n",
@@ -876,7 +867,7 @@
        "4           33           30           21         33  Clover Park         231  "
       ]
      },
-     "execution_count": 12,
+     "execution_count": 273,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -887,7 +878,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 274,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -896,7 +887,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
+   "execution_count": 275,
    "metadata": {},
    "outputs": [
     {
@@ -944,7 +935,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>106 Lawrence Crescent Hill Park, Auckland</td>\n",
-       "      <td>714.0</td>\n",
+       "      <td>714</td>\n",
        "      <td>960000</td>\n",
        "      <td>-37.012920</td>\n",
        "      <td>174.904069</td>\n",
@@ -963,7 +954,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>8 Corsica Way Karaka, Auckland</td>\n",
-       "      <td>564.0</td>\n",
+       "      <td>564</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063672</td>\n",
        "      <td>174.922912</td>\n",
@@ -982,7 +973,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>243 Harbourside Drive Karaka, Auckland</td>\n",
-       "      <td>626.0</td>\n",
+       "      <td>626</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063580</td>\n",
        "      <td>174.924044</td>\n",
@@ -1001,7 +992,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>2/30 Hardington Street Onehunga, Auckland</td>\n",
-       "      <td>65.0</td>\n",
+       "      <td>65</td>\n",
        "      <td>740000</td>\n",
        "      <td>-36.912996</td>\n",
        "      <td>174.787425</td>\n",
@@ -1020,7 +1011,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>59 Israel Avenue Clover Park, Auckland</td>\n",
-       "      <td>601.0</td>\n",
+       "      <td>601</td>\n",
        "      <td>630000</td>\n",
        "      <td>-36.979037</td>\n",
        "      <td>174.892612</td>\n",
@@ -1039,12 +1030,12 @@
        "</div>"
       ],
       "text/plain": [
-       "   Bedrooms  Bathrooms                                    Address  Land area  \\\n",
-       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland      714.0   \n",
-       "1         5        3.0             8 Corsica Way Karaka, Auckland      564.0   \n",
-       "2         6        4.0     243 Harbourside Drive Karaka, Auckland      626.0   \n",
-       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland       65.0   \n",
-       "4         3        1.0     59 Israel Avenue Clover Park, Auckland      601.0   \n",
+       "   Bedrooms  Bathrooms                                    Address Land area  \\\n",
+       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland       714   \n",
+       "1         5        3.0             8 Corsica Way Karaka, Auckland       564   \n",
+       "2         6        4.0     243 Harbourside Drive Karaka, Auckland       626   \n",
+       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland        65   \n",
+       "4         3        1.0     59 Israel Avenue Clover Park, Auckland       601   \n",
        "\n",
        "        CV   Latitude   Longitude      SA1  0-19 years  20-29 years  \\\n",
        "0   960000 -37.012920  174.904069  7009770          48           27   \n",
@@ -1061,7 +1052,7 @@
        "4           33           30           21         33  Clover Park         231  "
       ]
      },
-     "execution_count": 14,
+     "execution_count": 275,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1072,7 +1063,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 276,
    "metadata": {},
    "outputs": [
     {
@@ -1098,7 +1089,6 @@
        "      <th></th>\n",
        "      <th>Bedrooms</th>\n",
        "      <th>Bathrooms</th>\n",
-       "      <th>Land area</th>\n",
        "      <th>CV</th>\n",
        "      <th>Latitude</th>\n",
        "      <th>Longitude</th>\n",
@@ -1117,7 +1107,6 @@
        "      <th>count</th>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1049.000000</td>\n",
-       "      <td>1051.000000</td>\n",
        "      <td>1.051000e+03</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
@@ -1134,7 +1123,6 @@
        "      <th>mean</th>\n",
        "      <td>3.777355</td>\n",
        "      <td>2.073403</td>\n",
-       "      <td>856.989534</td>\n",
        "      <td>1.387521e+06</td>\n",
        "      <td>-36.893715</td>\n",
        "      <td>174.799325</td>\n",
@@ -1151,7 +1139,6 @@
        "      <th>std</th>\n",
        "      <td>1.169412</td>\n",
        "      <td>0.992985</td>\n",
-       "      <td>1588.156219</td>\n",
        "      <td>1.182939e+06</td>\n",
        "      <td>0.130100</td>\n",
        "      <td>0.119538</td>\n",
@@ -1168,7 +1155,6 @@
        "      <th>min</th>\n",
        "      <td>1.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>40.000000</td>\n",
        "      <td>2.700000e+05</td>\n",
        "      <td>-37.265021</td>\n",
        "      <td>174.317078</td>\n",
@@ -1185,7 +1171,6 @@
        "      <th>25%</th>\n",
        "      <td>3.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>321.000000</td>\n",
        "      <td>7.800000e+05</td>\n",
        "      <td>-36.950565</td>\n",
        "      <td>174.720779</td>\n",
@@ -1202,7 +1187,6 @@
        "      <th>50%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>2.000000</td>\n",
-       "      <td>571.000000</td>\n",
        "      <td>1.080000e+06</td>\n",
        "      <td>-36.893132</td>\n",
        "      <td>174.798575</td>\n",
@@ -1219,7 +1203,6 @@
        "      <th>75%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>3.000000</td>\n",
-       "      <td>825.000000</td>\n",
        "      <td>1.600000e+06</td>\n",
        "      <td>-36.855789</td>\n",
        "      <td>174.880944</td>\n",
@@ -1236,7 +1219,6 @@
        "      <th>max</th>\n",
        "      <td>17.000000</td>\n",
        "      <td>8.000000</td>\n",
-       "      <td>22240.000000</td>\n",
        "      <td>1.800000e+07</td>\n",
        "      <td>-36.177655</td>\n",
        "      <td>175.492424</td>\n",
@@ -1254,38 +1236,38 @@
        "</div>"
       ],
       "text/plain": [
-       "          Bedrooms    Bathrooms     Land area            CV     Latitude  \\\n",
-       "count  1051.000000  1049.000000   1051.000000  1.051000e+03  1051.000000   \n",
-       "mean      3.777355     2.073403    856.989534  1.387521e+06   -36.893715   \n",
-       "std       1.169412     0.992985   1588.156219  1.182939e+06     0.130100   \n",
-       "min       1.000000     1.000000     40.000000  2.700000e+05   -37.265021   \n",
-       "25%       3.000000     1.000000    321.000000  7.800000e+05   -36.950565   \n",
-       "50%       4.000000     2.000000    571.000000  1.080000e+06   -36.893132   \n",
-       "75%       4.000000     3.000000    825.000000  1.600000e+06   -36.855789   \n",
-       "max      17.000000     8.000000  22240.000000  1.800000e+07   -36.177655   \n",
+       "          Bedrooms    Bathrooms            CV     Latitude    Longitude  \\\n",
+       "count  1051.000000  1049.000000  1.051000e+03  1051.000000  1051.000000   \n",
+       "mean      3.777355     2.073403  1.387521e+06   -36.893715   174.799325   \n",
+       "std       1.169412     0.992985  1.182939e+06     0.130100     0.119538   \n",
+       "min       1.000000     1.000000  2.700000e+05   -37.265021   174.317078   \n",
+       "25%       3.000000     1.000000  7.800000e+05   -36.950565   174.720779   \n",
+       "50%       4.000000     2.000000  1.080000e+06   -36.893132   174.798575   \n",
+       "75%       4.000000     3.000000  1.600000e+06   -36.855789   174.880944   \n",
+       "max      17.000000     8.000000  1.800000e+07   -36.177655   175.492424   \n",
        "\n",
-       "         Longitude           SA1   0-19 years  20-29 years  30-39 years  \\\n",
-       "count  1051.000000  1.051000e+03  1051.000000  1051.000000  1051.000000   \n",
-       "mean    174.799325  7.006319e+06    47.549001    28.963844    27.042816   \n",
-       "std       0.119538  2.591262e+03    24.692205    21.037441    17.975408   \n",
-       "min     174.317078  7.001130e+06     0.000000     0.000000     0.000000   \n",
-       "25%     174.720779  7.004416e+06    33.000000    15.000000    15.000000   \n",
-       "50%     174.798575  7.006325e+06    45.000000    24.000000    24.000000   \n",
-       "75%     174.880944  7.008384e+06    57.000000    36.000000    33.000000   \n",
-       "max     175.492424  7.011028e+06   201.000000   270.000000   177.000000   \n",
+       "                SA1   0-19 years  20-29 years  30-39 years  40-49 years  \\\n",
+       "count  1.051000e+03  1051.000000  1051.000000  1051.000000  1051.000000   \n",
+       "mean   7.006319e+06    47.549001    28.963844    27.042816    24.125595   \n",
+       "std    2.591262e+03    24.692205    21.037441    17.975408    10.942770   \n",
+       "min    7.001130e+06     0.000000     0.000000     0.000000     0.000000   \n",
+       "25%    7.004416e+06    33.000000    15.000000    15.000000    18.000000   \n",
+       "50%    7.006325e+06    45.000000    24.000000    24.000000    24.000000   \n",
+       "75%    7.008384e+06    57.000000    36.000000    33.000000    30.000000   \n",
+       "max    7.011028e+06   201.000000   270.000000   177.000000   114.000000   \n",
        "\n",
-       "       40-49 years  50-59 years    60+ years   C18_CURPop  \n",
-       "count  1051.000000  1051.000000  1051.000000  1051.000000  \n",
-       "mean     24.125595    22.615604    29.360609   179.914367  \n",
-       "std      10.942770    10.210578    21.805031    71.059280  \n",
-       "min       0.000000     0.000000     0.000000     3.000000  \n",
-       "25%      18.000000    15.000000    18.000000   138.000000  \n",
-       "50%      24.000000    21.000000    27.000000   174.000000  \n",
-       "75%      30.000000    27.000000    36.000000   210.000000  \n",
-       "max     114.000000    90.000000   483.000000   789.000000  "
+       "       50-59 years    60+ years   C18_CURPop  \n",
+       "count  1051.000000  1051.000000  1051.000000  \n",
+       "mean     22.615604    29.360609   179.914367  \n",
+       "std      10.210578    21.805031    71.059280  \n",
+       "min       0.000000     0.000000     3.000000  \n",
+       "25%      15.000000    18.000000   138.000000  \n",
+       "50%      21.000000    27.000000   174.000000  \n",
+       "75%      27.000000    36.000000   210.000000  \n",
+       "max      90.000000   483.000000   789.000000  "
       ]
      },
-     "execution_count": 15,
+     "execution_count": 276,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1303,7 +1285,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 277,
    "metadata": {},
    "outputs": [
     {
@@ -1312,7 +1294,7 @@
      "text": [
       "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n",
       "                                 Dload  Upload   Total   Spent    Left  Speed\n",
-      "100 1178k  100 1178k    0     0   783k      0  0:00:01  0:00:01 --:--:--  783k\n"
+      "100 1178k  100 1178k    0     0  1089k      0  0:00:01  0:00:01 --:--:-- 1088k\n"
      ]
     }
    ],
@@ -1322,7 +1304,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 278,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1331,7 +1313,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
+   "execution_count": 279,
    "metadata": {},
    "outputs": [
     {
@@ -1429,7 +1411,7 @@
        "4                 North Cape  "
       ]
      },
-     "execution_count": 18,
+     "execution_count": 279,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1440,7 +1422,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 19,
+   "execution_count": 280,
    "metadata": {},
    "outputs": [
     {
@@ -1562,7 +1544,7 @@
        "max    400016.00000  "
       ]
      },
-     "execution_count": 19,
+     "execution_count": 280,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1573,7 +1555,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
+   "execution_count": 281,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1582,7 +1564,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 81,
+   "execution_count": 282,
    "metadata": {},
    "outputs": [
     {
@@ -1635,7 +1617,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>106 Lawrence Crescent Hill Park, Auckland</td>\n",
-       "      <td>714.0</td>\n",
+       "      <td>714</td>\n",
        "      <td>960000</td>\n",
        "      <td>-37.012920</td>\n",
        "      <td>174.904069</td>\n",
@@ -1659,7 +1641,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>8 Corsica Way Karaka, Auckland</td>\n",
-       "      <td>564.0</td>\n",
+       "      <td>564</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063672</td>\n",
        "      <td>174.922912</td>\n",
@@ -1683,7 +1665,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>243 Harbourside Drive Karaka, Auckland</td>\n",
-       "      <td>626.0</td>\n",
+       "      <td>626</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063580</td>\n",
        "      <td>174.924044</td>\n",
@@ -1707,7 +1689,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>2/30 Hardington Street Onehunga, Auckland</td>\n",
-       "      <td>65.0</td>\n",
+       "      <td>65</td>\n",
        "      <td>740000</td>\n",
        "      <td>-36.912996</td>\n",
        "      <td>174.787425</td>\n",
@@ -1731,7 +1713,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>59 Israel Avenue Clover Park, Auckland</td>\n",
-       "      <td>601.0</td>\n",
+       "      <td>601</td>\n",
        "      <td>630000</td>\n",
        "      <td>-36.979037</td>\n",
        "      <td>174.892612</td>\n",
@@ -1755,7 +1737,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>14 Tainui Terrace Mangere Bridge, Auckland</td>\n",
-       "      <td>100.0</td>\n",
+       "      <td>100</td>\n",
        "      <td>1050000</td>\n",
        "      <td>-36.943929</td>\n",
        "      <td>174.780501</td>\n",
@@ -1779,7 +1761,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>54 Kelmarna Avenue Ponsonby, Auckland</td>\n",
-       "      <td>531.0</td>\n",
+       "      <td>531</td>\n",
        "      <td>2525000</td>\n",
        "      <td>-36.849239</td>\n",
        "      <td>174.734451</td>\n",
@@ -1803,7 +1785,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>39 Rawhiti Road One Tree Hill, Auckland</td>\n",
-       "      <td>1024.0</td>\n",
+       "      <td>1024</td>\n",
        "      <td>1400000</td>\n",
        "      <td>-36.907700</td>\n",
        "      <td>174.796042</td>\n",
@@ -1827,7 +1809,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>17b Tawa Crescent Manurewa, Auckland</td>\n",
-       "      <td>80.0</td>\n",
+       "      <td>80</td>\n",
        "      <td>475000</td>\n",
        "      <td>-37.033322</td>\n",
        "      <td>174.898113</td>\n",
@@ -1851,7 +1833,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>39a Keegan Drive Massey, Auckland</td>\n",
-       "      <td>204.0</td>\n",
+       "      <td>204</td>\n",
        "      <td>660000</td>\n",
        "      <td>-36.846208</td>\n",
        "      <td>174.620794</td>\n",
@@ -1875,7 +1857,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>39c Keegan Drive Massey, Auckland</td>\n",
-       "      <td>170.0</td>\n",
+       "      <td>170</td>\n",
        "      <td>900000</td>\n",
        "      <td>-36.846208</td>\n",
        "      <td>174.620794</td>\n",
@@ -1899,7 +1881,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>39b Keegan Drive Massey, Auckland</td>\n",
-       "      <td>170.0</td>\n",
+       "      <td>170</td>\n",
        "      <td>660000</td>\n",
        "      <td>-36.846208</td>\n",
        "      <td>174.620794</td>\n",
@@ -1923,7 +1905,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>9 Menear Lane Hillcrest, Auckland</td>\n",
-       "      <td>637.0</td>\n",
+       "      <td>637</td>\n",
        "      <td>920000</td>\n",
        "      <td>-36.792535</td>\n",
        "      <td>174.727263</td>\n",
@@ -1947,7 +1929,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>10 Fairlight Place Manurewa, Auckland</td>\n",
-       "      <td>640.0</td>\n",
+       "      <td>640</td>\n",
        "      <td>570000</td>\n",
        "      <td>-37.025120</td>\n",
        "      <td>174.879631</td>\n",
@@ -1971,7 +1953,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>11 Arran Drive Millwater, Auckland</td>\n",
-       "      <td>650.0</td>\n",
+       "      <td>650</td>\n",
        "      <td>1150000</td>\n",
        "      <td>-36.904075</td>\n",
        "      <td>174.694257</td>\n",
@@ -1995,7 +1977,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>53a Kimber Hall Avenue Mount Roskill, Auckland</td>\n",
-       "      <td>138.0</td>\n",
+       "      <td>138</td>\n",
        "      <td>1200000</td>\n",
        "      <td>-36.918447</td>\n",
        "      <td>174.717708</td>\n",
@@ -2019,7 +2001,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>1/77 Kimber Hall Avenue Mount Roskill, Auckland</td>\n",
-       "      <td>75.0</td>\n",
+       "      <td>75</td>\n",
        "      <td>640000</td>\n",
        "      <td>-36.918516</td>\n",
        "      <td>174.719257</td>\n",
@@ -2043,7 +2025,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>42 Johns Creek Crescent Silverdale, Auckland</td>\n",
-       "      <td>724.0</td>\n",
+       "      <td>724</td>\n",
        "      <td>640000</td>\n",
        "      <td>-36.621939</td>\n",
        "      <td>174.663944</td>\n",
@@ -2067,7 +2049,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>4 Ahorangi Road Silverdale, Auckland</td>\n",
-       "      <td>429.0</td>\n",
+       "      <td>429</td>\n",
        "      <td>1180000</td>\n",
        "      <td>-36.623328</td>\n",
        "      <td>174.664014</td>\n",
@@ -2091,7 +2073,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>32 Johns Creek Crescent Silverdale, Auckland</td>\n",
-       "      <td>520.0</td>\n",
+       "      <td>520</td>\n",
        "      <td>590000</td>\n",
        "      <td>-36.621939</td>\n",
        "      <td>174.663944</td>\n",
@@ -2115,7 +2097,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>577 Mt Albert Road Royal Oak, Auckland</td>\n",
-       "      <td>1381.0</td>\n",
+       "      <td>1381</td>\n",
        "      <td>2080000</td>\n",
        "      <td>-36.910598</td>\n",
        "      <td>174.763305</td>\n",
@@ -2139,7 +2121,7 @@
        "      <td>5</td>\n",
        "      <td>4.0</td>\n",
        "      <td>109 Aberley Road Schnapper Rock, Auckland</td>\n",
-       "      <td>732.0</td>\n",
+       "      <td>732</td>\n",
        "      <td>1800000</td>\n",
        "      <td>-36.750601</td>\n",
        "      <td>174.679558</td>\n",
@@ -2163,7 +2145,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>19 Kenley Place Avondale, Auckland</td>\n",
-       "      <td>799.0</td>\n",
+       "      <td>799</td>\n",
        "      <td>1145000</td>\n",
        "      <td>-36.889650</td>\n",
        "      <td>174.674607</td>\n",
@@ -2187,7 +2169,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>27 Stottholm Road Titirangi, Auckland</td>\n",
-       "      <td>1105.0</td>\n",
+       "      <td>1105</td>\n",
        "      <td>920000</td>\n",
        "      <td>-36.928488</td>\n",
        "      <td>174.669488</td>\n",
@@ -2211,7 +2193,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>71 First Avenue Kingsland, Auckland</td>\n",
-       "      <td>463.0</td>\n",
+       "      <td>463</td>\n",
        "      <td>1500000</td>\n",
        "      <td>-36.872180</td>\n",
        "      <td>174.738631</td>\n",
@@ -2235,7 +2217,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>17 Dalwhinnie Parade Highland Park, Auckland</td>\n",
-       "      <td>681.0</td>\n",
+       "      <td>681</td>\n",
        "      <td>1100000</td>\n",
        "      <td>-36.901445</td>\n",
        "      <td>174.915807</td>\n",
@@ -2259,7 +2241,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>24a Roberts Road Matakatia Bay, Auckland</td>\n",
-       "      <td>4068.0</td>\n",
+       "      <td>4068</td>\n",
        "      <td>710000</td>\n",
        "      <td>-36.619223</td>\n",
        "      <td>174.779893</td>\n",
@@ -2283,7 +2265,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>72 Stonefields Avenue Stonefields, Auckland</td>\n",
-       "      <td>106.0</td>\n",
+       "      <td>106</td>\n",
        "      <td>1020000</td>\n",
        "      <td>-36.887909</td>\n",
        "      <td>174.843282</td>\n",
@@ -2307,7 +2289,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>62 Richardson Road Mount Albert, Auckland</td>\n",
-       "      <td>713.0</td>\n",
+       "      <td>713</td>\n",
        "      <td>1150000</td>\n",
        "      <td>-36.892470</td>\n",
        "      <td>174.714015</td>\n",
@@ -2331,7 +2313,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>47b Comins Crescent Mission Bay, Auckland</td>\n",
-       "      <td>211.0</td>\n",
+       "      <td>211</td>\n",
        "      <td>1600000</td>\n",
        "      <td>-36.854067</td>\n",
        "      <td>174.834749</td>\n",
@@ -2379,7 +2361,7 @@
        "      <td>4</td>\n",
        "      <td>3.0</td>\n",
        "      <td>18a Campbell Road, Auckland</td>\n",
-       "      <td>277.0</td>\n",
+       "      <td>277 m²</td>\n",
        "      <td>1850000</td>\n",
        "      <td>-36.910651</td>\n",
        "      <td>174.777804</td>\n",
@@ -2403,7 +2385,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>62A Maioro Street, Auckland</td>\n",
-       "      <td>308.0</td>\n",
+       "      <td>308 m²</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-36.905944</td>\n",
        "      <td>174.717491</td>\n",
@@ -2427,7 +2409,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>9 Waitara Road, Auckland</td>\n",
-       "      <td>888.0</td>\n",
+       "      <td>888 m²</td>\n",
        "      <td>3500000</td>\n",
        "      <td>-36.847622</td>\n",
        "      <td>174.869938</td>\n",
@@ -2451,7 +2433,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>13B Waitara Road, Auckland</td>\n",
-       "      <td>664.0</td>\n",
+       "      <td>664 m²</td>\n",
        "      <td>3900000</td>\n",
        "      <td>-36.847171</td>\n",
        "      <td>174.870109</td>\n",
@@ -2475,7 +2457,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>5 Waitara Road, Auckland</td>\n",
-       "      <td>889.0</td>\n",
+       "      <td>889 m²</td>\n",
        "      <td>4100000</td>\n",
        "      <td>-36.847919</td>\n",
        "      <td>174.870124</td>\n",
@@ -2499,7 +2481,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>498A Remuera Road, Auckland</td>\n",
-       "      <td>677.0</td>\n",
+       "      <td>677 m²</td>\n",
        "      <td>3450000</td>\n",
        "      <td>-36.880804</td>\n",
        "      <td>174.804079</td>\n",
@@ -2523,7 +2505,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>5 Parry Road, Auckland</td>\n",
-       "      <td>670.0</td>\n",
+       "      <td>670 m²</td>\n",
        "      <td>830000</td>\n",
        "      <td>-36.933996</td>\n",
        "      <td>174.845085</td>\n",
@@ -2547,7 +2529,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>82 Gowing Drive, Auckland</td>\n",
-       "      <td>837.0</td>\n",
+       "      <td>837 m²</td>\n",
        "      <td>1850000</td>\n",
        "      <td>-36.867321</td>\n",
        "      <td>174.832469</td>\n",
@@ -2571,7 +2553,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>43 Arney Road, Auckland</td>\n",
-       "      <td>3062.0</td>\n",
+       "      <td>3062 m²</td>\n",
        "      <td>12250000</td>\n",
        "      <td>-36.872514</td>\n",
        "      <td>174.788572</td>\n",
@@ -2595,7 +2577,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>55A Arney Road, Auckland</td>\n",
-       "      <td>652.0</td>\n",
+       "      <td>652 m²</td>\n",
        "      <td>3450000</td>\n",
        "      <td>-36.872449</td>\n",
        "      <td>174.789432</td>\n",
@@ -2619,7 +2601,7 @@
        "      <td>3</td>\n",
        "      <td>2.0</td>\n",
        "      <td>Lot 1  6/22 Ngaio Street, Auckland</td>\n",
-       "      <td>971.0</td>\n",
+       "      <td>971 m²</td>\n",
        "      <td>2425000</td>\n",
        "      <td>-36.951327</td>\n",
        "      <td>174.848495</td>\n",
@@ -2643,7 +2625,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>167B Blockhouse Bay Road, Auckland</td>\n",
-       "      <td>344.0</td>\n",
+       "      <td>344 m²</td>\n",
        "      <td>1000000</td>\n",
        "      <td>-36.898477</td>\n",
        "      <td>174.700901</td>\n",
@@ -2667,7 +2649,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>133 Mt Smart Road, Auckland</td>\n",
-       "      <td>581.0</td>\n",
+       "      <td>581 m²</td>\n",
        "      <td>990000</td>\n",
        "      <td>-36.915315</td>\n",
        "      <td>174.790080</td>\n",
@@ -2691,7 +2673,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>67 Balmoral Road, Auckland</td>\n",
-       "      <td>1743.0</td>\n",
+       "      <td>1743 m²</td>\n",
        "      <td>2375000</td>\n",
        "      <td>-36.888798</td>\n",
        "      <td>174.758386</td>\n",
@@ -2715,7 +2697,7 @@
        "      <td>4</td>\n",
        "      <td>2.0</td>\n",
        "      <td>42B Marion Avenue, Auckland</td>\n",
-       "      <td>350.0</td>\n",
+       "      <td>350 m²</td>\n",
        "      <td>1150000</td>\n",
        "      <td>-36.910880</td>\n",
        "      <td>174.727424</td>\n",
@@ -2739,7 +2721,7 @@
        "      <td>5</td>\n",
        "      <td>2.0</td>\n",
        "      <td>23 Stoddard Road, Auckland</td>\n",
-       "      <td>340.0</td>\n",
+       "      <td>340 m²</td>\n",
        "      <td>760000</td>\n",
        "      <td>-36.907156</td>\n",
        "      <td>174.734224</td>\n",
@@ -2763,7 +2745,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>246 Victoria Avenue, Auckland</td>\n",
-       "      <td>1080.0</td>\n",
+       "      <td>1080 m²</td>\n",
        "      <td>3750000</td>\n",
        "      <td>-36.867084</td>\n",
        "      <td>174.798807</td>\n",
@@ -2787,7 +2769,7 @@
        "      <td>5</td>\n",
        "      <td>2.0</td>\n",
        "      <td>23 Wapiti Avenue, Auckland</td>\n",
-       "      <td>620.0</td>\n",
+       "      <td>620 m²</td>\n",
        "      <td>2250000</td>\n",
        "      <td>-36.887551</td>\n",
        "      <td>174.782449</td>\n",
@@ -2811,7 +2793,7 @@
        "      <td>5</td>\n",
        "      <td>6.0</td>\n",
        "      <td>57 Portland Road, Auckland</td>\n",
-       "      <td>3565.0</td>\n",
+       "      <td>3565 m²</td>\n",
        "      <td>12500000</td>\n",
        "      <td>-36.875552</td>\n",
        "      <td>174.795402</td>\n",
@@ -2835,7 +2817,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>11 Athenic Avenue, Auckland</td>\n",
-       "      <td>736.0</td>\n",
+       "      <td>736 m²</td>\n",
        "      <td>1175000</td>\n",
        "      <td>-36.930422</td>\n",
        "      <td>174.719044</td>\n",
@@ -2859,7 +2841,7 @@
        "      <td>6</td>\n",
        "      <td>2.0</td>\n",
        "      <td>24 &amp; 24A Hutton Street, Auckland</td>\n",
-       "      <td>2053.0</td>\n",
+       "      <td>2053 m²</td>\n",
        "      <td>1453000</td>\n",
        "      <td>-36.939243</td>\n",
        "      <td>174.847542</td>\n",
@@ -2883,7 +2865,7 @@
        "      <td>6</td>\n",
        "      <td>1.0</td>\n",
        "      <td>410 Mount Eden Road, Auckland</td>\n",
-       "      <td>640.0</td>\n",
+       "      <td>640 m²</td>\n",
        "      <td>2925000</td>\n",
        "      <td>-36.880503</td>\n",
        "      <td>174.762186</td>\n",
@@ -2907,7 +2889,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>12 Stratford Street, Auckland</td>\n",
-       "      <td>506.0</td>\n",
+       "      <td>506 m²</td>\n",
        "      <td>2175000</td>\n",
        "      <td>-36.853864</td>\n",
        "      <td>174.785183</td>\n",
@@ -2931,7 +2913,7 @@
        "      <td>4</td>\n",
        "      <td>3.0</td>\n",
        "      <td>126B Paritai Drive, Auckland</td>\n",
-       "      <td>578.0</td>\n",
+       "      <td>578 m²</td>\n",
        "      <td>4000000</td>\n",
        "      <td>-36.854497</td>\n",
        "      <td>174.810044</td>\n",
@@ -2955,7 +2937,7 @@
        "      <td>1</td>\n",
        "      <td>1.0</td>\n",
        "      <td>24 Kohimarama Road, Auckland</td>\n",
-       "      <td>252.0</td>\n",
+       "      <td>252 m²</td>\n",
        "      <td>920000</td>\n",
        "      <td>-36.849497</td>\n",
        "      <td>174.839815</td>\n",
@@ -2979,7 +2961,7 @@
        "      <td>4</td>\n",
        "      <td>1.0</td>\n",
        "      <td>19 Landscape Road, Auckland</td>\n",
-       "      <td>1368.0</td>\n",
+       "      <td>1368 m²</td>\n",
        "      <td>670000</td>\n",
        "      <td>-36.899255</td>\n",
        "      <td>174.761165</td>\n",
@@ -3003,7 +2985,7 @@
        "      <td>6</td>\n",
        "      <td>1.0</td>\n",
        "      <td>56 Galway Street, Auckland</td>\n",
-       "      <td>607.0</td>\n",
+       "      <td>607 m²</td>\n",
        "      <td>1200000</td>\n",
        "      <td>-36.844933</td>\n",
        "      <td>174.770001</td>\n",
@@ -3027,7 +3009,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>28A Hayr Road, Auckland</td>\n",
-       "      <td>453.0</td>\n",
+       "      <td>453 m²</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-36.912242</td>\n",
        "      <td>174.756726</td>\n",
@@ -3051,7 +3033,7 @@
        "      <td>5</td>\n",
        "      <td>2.0</td>\n",
        "      <td>27 Market Road, Auckland</td>\n",
-       "      <td>1854.0</td>\n",
+       "      <td>1854 m²</td>\n",
        "      <td>5300000</td>\n",
        "      <td>-36.879665</td>\n",
        "      <td>174.787668</td>\n",
@@ -3075,7 +3057,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>23 William Avenue, Auckland</td>\n",
-       "      <td>806.0</td>\n",
+       "      <td>806 m²</td>\n",
        "      <td>1665000</td>\n",
        "      <td>-36.897104</td>\n",
        "      <td>174.800171</td>\n",
@@ -3163,68 +3145,68 @@
        "1049         5        2.0                         27 Market Road, Auckland   \n",
        "1050         3        1.0                      23 William Avenue, Auckland   \n",
        "\n",
-       "      Land area        CV   Latitude   Longitude      SA1  0-19 years  \\\n",
-       "0         714.0    960000 -37.012920  174.904069  7009770          48   \n",
-       "1         564.0   1250000 -37.063672  174.922912  7009991          42   \n",
-       "2         626.0   1250000 -37.063580  174.924044  7009991          42   \n",
-       "3          65.0    740000 -36.912996  174.787425  7007871          42   \n",
-       "4         601.0    630000 -36.979037  174.892612  7008902          93   \n",
-       "5         100.0   1050000 -36.943929  174.780501  7007917          63   \n",
-       "6         531.0   2525000 -36.849239  174.734451  7004908          33   \n",
-       "7        1024.0   1400000 -36.907700  174.796042  7005903          36   \n",
-       "8          80.0    475000 -37.033322  174.898113  7009808          45   \n",
-       "9         204.0    660000 -36.846208  174.620794  7003826          30   \n",
-       "10        170.0    900000 -36.846208  174.620794  7003826          30   \n",
-       "11        170.0    660000 -36.846208  174.620794  7003826          30   \n",
-       "12        637.0    920000 -36.792535  174.727263  7002805          42   \n",
-       "13        640.0    570000 -37.025120  174.879631  7009565          69   \n",
-       "14        650.0   1150000 -36.904075  174.694257  7004424          54   \n",
-       "15        138.0   1200000 -36.918447  174.717708  7007562          51   \n",
-       "16         75.0    640000 -36.918516  174.719257  7007562          51   \n",
-       "17        724.0    640000 -36.621939  174.663944  7001422          51   \n",
-       "18        429.0   1180000 -36.623328  174.664014  7001422          51   \n",
-       "19        520.0    590000 -36.621939  174.663944  7001422          51   \n",
-       "20       1381.0   2080000 -36.910598  174.763305  7007751          27   \n",
-       "21        732.0   1800000 -36.750601  174.679558  7002324          63   \n",
-       "22        799.0   1145000 -36.889650  174.674607  7004268          48   \n",
-       "23       1105.0    920000 -36.928488  174.669488  7007391          72   \n",
-       "24        463.0   1500000 -36.872180  174.738631  7004956          21   \n",
-       "25        681.0   1100000 -36.901445  174.915807  7006932          12   \n",
-       "26       4068.0    710000 -36.619223  174.779893  7001678          51   \n",
-       "27        106.0   1020000 -36.887909  174.843282  7006356          45   \n",
-       "28        713.0   1150000 -36.892470  174.714015  7004636          51   \n",
-       "29        211.0   1600000 -36.854067  174.834749  7006277          24   \n",
-       "...         ...       ...        ...         ...      ...         ...   \n",
-       "1021      277.0   1850000 -36.910651  174.777804  7007803          45   \n",
-       "1022      308.0   1250000 -36.905944  174.717491  7004668          39   \n",
-       "1023      888.0   3500000 -36.847622  174.869938  7006620          78   \n",
-       "1024      664.0   3900000 -36.847171  174.870109  7006620          78   \n",
-       "1025      889.0   4100000 -36.847919  174.870124  7006620          78   \n",
-       "1026      677.0   3450000 -36.880804  174.804079  7005992          42   \n",
-       "1027      670.0    830000 -36.933996  174.845085  7008345          57   \n",
-       "1028      837.0   1850000 -36.867321  174.832469  7006199          36   \n",
-       "1029     3062.0  12250000 -36.872514  174.788572  7005696          60   \n",
-       "1030      652.0   3450000 -36.872449  174.789432  7005696          60   \n",
-       "1031      971.0   2425000 -36.951327  174.848495  7008497          42   \n",
-       "1032      344.0   1000000 -36.898477  174.700901  7004411          36   \n",
-       "1033      581.0    990000 -36.915315  174.790080  7007881          45   \n",
-       "1034     1743.0   2375000 -36.888798  174.758386  7005430          60   \n",
-       "1035      350.0   1150000 -36.910880  174.727424  7007594          51   \n",
-       "1036      340.0    760000 -36.907156  174.734224  7004840          42   \n",
-       "1037     1080.0   3750000 -36.867084  174.798807  7005826          33   \n",
-       "1038      620.0   2250000 -36.887551  174.782449  7005743          51   \n",
-       "1039     3565.0  12500000 -36.875552  174.795402  7005840          42   \n",
-       "1040      736.0   1175000 -36.930422  174.719044  7007584          30   \n",
-       "1041     2053.0   1453000 -36.939243  174.847542  7008478          39   \n",
-       "1042      640.0   2925000 -36.880503  174.762186  7005403          36   \n",
-       "1043      506.0   2175000 -36.853864  174.785183  7005660          42   \n",
-       "1044      578.0   4000000 -36.854497  174.810044  7005961          15   \n",
-       "1045      252.0    920000 -36.849497  174.839815  7006283           9   \n",
-       "1046     1368.0    670000 -36.899255  174.761165  7005464          54   \n",
-       "1047      607.0   1200000 -36.844933  174.770001  7005497          15   \n",
-       "1048      453.0   1250000 -36.912242  174.756726  7007758          36   \n",
-       "1049     1854.0   5300000 -36.879665  174.787668  7005745          48   \n",
-       "1050      806.0   1665000 -36.897104  174.800171  7005917          54   \n",
+       "     Land area        CV   Latitude   Longitude      SA1  0-19 years  \\\n",
+       "0          714    960000 -37.012920  174.904069  7009770          48   \n",
+       "1          564   1250000 -37.063672  174.922912  7009991          42   \n",
+       "2          626   1250000 -37.063580  174.924044  7009991          42   \n",
+       "3           65    740000 -36.912996  174.787425  7007871          42   \n",
+       "4          601    630000 -36.979037  174.892612  7008902          93   \n",
+       "5          100   1050000 -36.943929  174.780501  7007917          63   \n",
+       "6          531   2525000 -36.849239  174.734451  7004908          33   \n",
+       "7         1024   1400000 -36.907700  174.796042  7005903          36   \n",
+       "8           80    475000 -37.033322  174.898113  7009808          45   \n",
+       "9          204    660000 -36.846208  174.620794  7003826          30   \n",
+       "10         170    900000 -36.846208  174.620794  7003826          30   \n",
+       "11         170    660000 -36.846208  174.620794  7003826          30   \n",
+       "12         637    920000 -36.792535  174.727263  7002805          42   \n",
+       "13         640    570000 -37.025120  174.879631  7009565          69   \n",
+       "14         650   1150000 -36.904075  174.694257  7004424          54   \n",
+       "15         138   1200000 -36.918447  174.717708  7007562          51   \n",
+       "16          75    640000 -36.918516  174.719257  7007562          51   \n",
+       "17         724    640000 -36.621939  174.663944  7001422          51   \n",
+       "18         429   1180000 -36.623328  174.664014  7001422          51   \n",
+       "19         520    590000 -36.621939  174.663944  7001422          51   \n",
+       "20        1381   2080000 -36.910598  174.763305  7007751          27   \n",
+       "21         732   1800000 -36.750601  174.679558  7002324          63   \n",
+       "22         799   1145000 -36.889650  174.674607  7004268          48   \n",
+       "23        1105    920000 -36.928488  174.669488  7007391          72   \n",
+       "24         463   1500000 -36.872180  174.738631  7004956          21   \n",
+       "25         681   1100000 -36.901445  174.915807  7006932          12   \n",
+       "26        4068    710000 -36.619223  174.779893  7001678          51   \n",
+       "27         106   1020000 -36.887909  174.843282  7006356          45   \n",
+       "28         713   1150000 -36.892470  174.714015  7004636          51   \n",
+       "29         211   1600000 -36.854067  174.834749  7006277          24   \n",
+       "...        ...       ...        ...         ...      ...         ...   \n",
+       "1021    277 m²   1850000 -36.910651  174.777804  7007803          45   \n",
+       "1022    308 m²   1250000 -36.905944  174.717491  7004668          39   \n",
+       "1023    888 m²   3500000 -36.847622  174.869938  7006620          78   \n",
+       "1024    664 m²   3900000 -36.847171  174.870109  7006620          78   \n",
+       "1025    889 m²   4100000 -36.847919  174.870124  7006620          78   \n",
+       "1026    677 m²   3450000 -36.880804  174.804079  7005992          42   \n",
+       "1027    670 m²    830000 -36.933996  174.845085  7008345          57   \n",
+       "1028    837 m²   1850000 -36.867321  174.832469  7006199          36   \n",
+       "1029   3062 m²  12250000 -36.872514  174.788572  7005696          60   \n",
+       "1030    652 m²   3450000 -36.872449  174.789432  7005696          60   \n",
+       "1031    971 m²   2425000 -36.951327  174.848495  7008497          42   \n",
+       "1032    344 m²   1000000 -36.898477  174.700901  7004411          36   \n",
+       "1033    581 m²    990000 -36.915315  174.790080  7007881          45   \n",
+       "1034   1743 m²   2375000 -36.888798  174.758386  7005430          60   \n",
+       "1035    350 m²   1150000 -36.910880  174.727424  7007594          51   \n",
+       "1036    340 m²    760000 -36.907156  174.734224  7004840          42   \n",
+       "1037   1080 m²   3750000 -36.867084  174.798807  7005826          33   \n",
+       "1038    620 m²   2250000 -36.887551  174.782449  7005743          51   \n",
+       "1039   3565 m²  12500000 -36.875552  174.795402  7005840          42   \n",
+       "1040    736 m²   1175000 -36.930422  174.719044  7007584          30   \n",
+       "1041   2053 m²   1453000 -36.939243  174.847542  7008478          39   \n",
+       "1042    640 m²   2925000 -36.880503  174.762186  7005403          36   \n",
+       "1043    506 m²   2175000 -36.853864  174.785183  7005660          42   \n",
+       "1044    578 m²   4000000 -36.854497  174.810044  7005961          15   \n",
+       "1045    252 m²    920000 -36.849497  174.839815  7006283           9   \n",
+       "1046   1368 m²    670000 -36.899255  174.761165  7005464          54   \n",
+       "1047    607 m²   1200000 -36.844933  174.770001  7005497          15   \n",
+       "1048    453 m²   1250000 -36.912242  174.756726  7007758          36   \n",
+       "1049   1854 m²   5300000 -36.879665  174.787668  7005745          48   \n",
+       "1050    806 m²   1665000 -36.897104  174.800171  7005917          54   \n",
        "\n",
        "      20-29 years              ...                50-59 years  60+ years  \\\n",
        "0              27              ...                         24         21   \n",
@@ -3418,7 +3400,7 @@
        "[1051 rows x 22 columns]"
       ]
      },
-     "execution_count": 81,
+     "execution_count": 282,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3429,7 +3411,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 74,
+   "execution_count": 283,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -3438,7 +3420,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 83,
+   "execution_count": 284,
    "metadata": {},
    "outputs": [
     {
@@ -3487,7 +3469,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>106 Lawrence Crescent Hill Park, Auckland</td>\n",
-       "      <td>714.0</td>\n",
+       "      <td>714</td>\n",
        "      <td>960000</td>\n",
        "      <td>-37.012920</td>\n",
        "      <td>174.904069</td>\n",
@@ -3507,7 +3489,7 @@
        "      <td>5</td>\n",
        "      <td>3.0</td>\n",
        "      <td>8 Corsica Way Karaka, Auckland</td>\n",
-       "      <td>564.0</td>\n",
+       "      <td>564</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063672</td>\n",
        "      <td>174.922912</td>\n",
@@ -3527,7 +3509,7 @@
        "      <td>6</td>\n",
        "      <td>4.0</td>\n",
        "      <td>243 Harbourside Drive Karaka, Auckland</td>\n",
-       "      <td>626.0</td>\n",
+       "      <td>626</td>\n",
        "      <td>1250000</td>\n",
        "      <td>-37.063580</td>\n",
        "      <td>174.924044</td>\n",
@@ -3547,7 +3529,7 @@
        "      <td>2</td>\n",
        "      <td>1.0</td>\n",
        "      <td>2/30 Hardington Street Onehunga, Auckland</td>\n",
-       "      <td>65.0</td>\n",
+       "      <td>65</td>\n",
        "      <td>740000</td>\n",
        "      <td>-36.912996</td>\n",
        "      <td>174.787425</td>\n",
@@ -3567,7 +3549,7 @@
        "      <td>3</td>\n",
        "      <td>1.0</td>\n",
        "      <td>59 Israel Avenue Clover Park, Auckland</td>\n",
-       "      <td>601.0</td>\n",
+       "      <td>601</td>\n",
        "      <td>630000</td>\n",
        "      <td>-36.979037</td>\n",
        "      <td>174.892612</td>\n",
@@ -3587,12 +3569,12 @@
        "</div>"
       ],
       "text/plain": [
-       "   Bedrooms  Bathrooms                                    Address  Land area  \\\n",
-       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland      714.0   \n",
-       "1         5        3.0             8 Corsica Way Karaka, Auckland      564.0   \n",
-       "2         6        4.0     243 Harbourside Drive Karaka, Auckland      626.0   \n",
-       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland       65.0   \n",
-       "4         3        1.0     59 Israel Avenue Clover Park, Auckland      601.0   \n",
+       "   Bedrooms  Bathrooms                                    Address Land area  \\\n",
+       "0         5        3.0  106 Lawrence Crescent Hill Park, Auckland       714   \n",
+       "1         5        3.0             8 Corsica Way Karaka, Auckland       564   \n",
+       "2         6        4.0     243 Harbourside Drive Karaka, Auckland       626   \n",
+       "3         2        1.0  2/30 Hardington Street Onehunga, Auckland        65   \n",
+       "4         3        1.0     59 Israel Avenue Clover Park, Auckland       601   \n",
        "\n",
        "        CV   Latitude   Longitude      SA1  0-19 years  20-29 years  \\\n",
        "0   960000 -37.012920  174.904069  7009770          48           27   \n",
@@ -3616,7 +3598,7 @@
        "4        9.0  "
       ]
      },
-     "execution_count": 83,
+     "execution_count": 284,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3627,11 +3609,18 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 263,
+   "execution_count": 285,
    "metadata": {},
    "outputs": [],
    "source": [
     "house_data.to_csv('complete_data.csv')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Now we'll collected two additional columns to the additional data, and can export the complete data. "
    ]
   },
   {
@@ -3644,7 +3633,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
+   "execution_count": 286,
    "metadata": {},
    "outputs": [
     {
@@ -3670,7 +3659,6 @@
        "      <th></th>\n",
        "      <th>Bedrooms</th>\n",
        "      <th>Bathrooms</th>\n",
-       "      <th>Land area</th>\n",
        "      <th>CV</th>\n",
        "      <th>Latitude</th>\n",
        "      <th>Longitude</th>\n",
@@ -3690,7 +3678,6 @@
        "      <th>count</th>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1049.000000</td>\n",
-       "      <td>1051.000000</td>\n",
        "      <td>1.051000e+03</td>\n",
        "      <td>1051.000000</td>\n",
        "      <td>1051.000000</td>\n",
@@ -3708,7 +3695,6 @@
        "      <th>mean</th>\n",
        "      <td>3.777355</td>\n",
        "      <td>2.073403</td>\n",
-       "      <td>856.989534</td>\n",
        "      <td>1.387521e+06</td>\n",
        "      <td>-36.893715</td>\n",
        "      <td>174.799325</td>\n",
@@ -3726,7 +3712,6 @@
        "      <th>std</th>\n",
        "      <td>1.169412</td>\n",
        "      <td>0.992985</td>\n",
-       "      <td>1588.156219</td>\n",
        "      <td>1.182939e+06</td>\n",
        "      <td>0.130100</td>\n",
        "      <td>0.119538</td>\n",
@@ -3744,7 +3729,6 @@
        "      <th>min</th>\n",
        "      <td>1.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>40.000000</td>\n",
        "      <td>2.700000e+05</td>\n",
        "      <td>-37.265021</td>\n",
        "      <td>174.317078</td>\n",
@@ -3762,7 +3746,6 @@
        "      <th>25%</th>\n",
        "      <td>3.000000</td>\n",
        "      <td>1.000000</td>\n",
-       "      <td>321.000000</td>\n",
        "      <td>7.800000e+05</td>\n",
        "      <td>-36.950565</td>\n",
        "      <td>174.720779</td>\n",
@@ -3780,7 +3763,6 @@
        "      <th>50%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>2.000000</td>\n",
-       "      <td>571.000000</td>\n",
        "      <td>1.080000e+06</td>\n",
        "      <td>-36.893132</td>\n",
        "      <td>174.798575</td>\n",
@@ -3798,7 +3780,6 @@
        "      <th>75%</th>\n",
        "      <td>4.000000</td>\n",
        "      <td>3.000000</td>\n",
-       "      <td>825.000000</td>\n",
        "      <td>1.600000e+06</td>\n",
        "      <td>-36.855789</td>\n",
        "      <td>174.880944</td>\n",
@@ -3816,7 +3797,6 @@
        "      <th>max</th>\n",
        "      <td>17.000000</td>\n",
        "      <td>8.000000</td>\n",
-       "      <td>22240.000000</td>\n",
        "      <td>1.800000e+07</td>\n",
        "      <td>-36.177655</td>\n",
        "      <td>175.492424</td>\n",
@@ -3835,38 +3815,38 @@
        "</div>"
       ],
       "text/plain": [
-       "          Bedrooms    Bathrooms     Land area            CV     Latitude  \\\n",
-       "count  1051.000000  1049.000000   1051.000000  1.051000e+03  1051.000000   \n",
-       "mean      3.777355     2.073403    856.989534  1.387521e+06   -36.893715   \n",
-       "std       1.169412     0.992985   1588.156219  1.182939e+06     0.130100   \n",
-       "min       1.000000     1.000000     40.000000  2.700000e+05   -37.265021   \n",
-       "25%       3.000000     1.000000    321.000000  7.800000e+05   -36.950565   \n",
-       "50%       4.000000     2.000000    571.000000  1.080000e+06   -36.893132   \n",
-       "75%       4.000000     3.000000    825.000000  1.600000e+06   -36.855789   \n",
-       "max      17.000000     8.000000  22240.000000  1.800000e+07   -36.177655   \n",
+       "          Bedrooms    Bathrooms            CV     Latitude    Longitude  \\\n",
+       "count  1051.000000  1049.000000  1.051000e+03  1051.000000  1051.000000   \n",
+       "mean      3.777355     2.073403  1.387521e+06   -36.893715   174.799325   \n",
+       "std       1.169412     0.992985  1.182939e+06     0.130100     0.119538   \n",
+       "min       1.000000     1.000000  2.700000e+05   -37.265021   174.317078   \n",
+       "25%       3.000000     1.000000  7.800000e+05   -36.950565   174.720779   \n",
+       "50%       4.000000     2.000000  1.080000e+06   -36.893132   174.798575   \n",
+       "75%       4.000000     3.000000  1.600000e+06   -36.855789   174.880944   \n",
+       "max      17.000000     8.000000  1.800000e+07   -36.177655   175.492424   \n",
        "\n",
-       "         Longitude           SA1   0-19 years  20-29 years  30-39 years  \\\n",
-       "count  1051.000000  1.051000e+03  1051.000000  1051.000000  1051.000000   \n",
-       "mean    174.799325  7.006319e+06    47.549001    28.963844    27.042816   \n",
-       "std       0.119538  2.591262e+03    24.692205    21.037441    17.975408   \n",
-       "min     174.317078  7.001130e+06     0.000000     0.000000     0.000000   \n",
-       "25%     174.720779  7.004416e+06    33.000000    15.000000    15.000000   \n",
-       "50%     174.798575  7.006325e+06    45.000000    24.000000    24.000000   \n",
-       "75%     174.880944  7.008384e+06    57.000000    36.000000    33.000000   \n",
-       "max     175.492424  7.011028e+06   201.000000   270.000000   177.000000   \n",
+       "                SA1   0-19 years  20-29 years  30-39 years  40-49 years  \\\n",
+       "count  1.051000e+03  1051.000000  1051.000000  1051.000000  1051.000000   \n",
+       "mean   7.006319e+06    47.549001    28.963844    27.042816    24.125595   \n",
+       "std    2.591262e+03    24.692205    21.037441    17.975408    10.942770   \n",
+       "min    7.001130e+06     0.000000     0.000000     0.000000     0.000000   \n",
+       "25%    7.004416e+06    33.000000    15.000000    15.000000    18.000000   \n",
+       "50%    7.006325e+06    45.000000    24.000000    24.000000    24.000000   \n",
+       "75%    7.008384e+06    57.000000    36.000000    33.000000    30.000000   \n",
+       "max    7.011028e+06   201.000000   270.000000   177.000000   114.000000   \n",
        "\n",
-       "       40-49 years  50-59 years    60+ years   C18_CURPop    NZDep2018  \n",
-       "count  1051.000000  1051.000000  1051.000000  1051.000000  1051.000000  \n",
-       "mean     24.125595    22.615604    29.360609   179.914367     5.063749  \n",
-       "std      10.942770    10.210578    21.805031    71.059280     2.913471  \n",
-       "min       0.000000     0.000000     0.000000     3.000000     1.000000  \n",
-       "25%      18.000000    15.000000    18.000000   138.000000     2.000000  \n",
-       "50%      24.000000    21.000000    27.000000   174.000000     5.000000  \n",
-       "75%      30.000000    27.000000    36.000000   210.000000     8.000000  \n",
-       "max     114.000000    90.000000   483.000000   789.000000    10.000000  "
+       "       50-59 years    60+ years   C18_CURPop    NZDep2018  \n",
+       "count  1051.000000  1051.000000  1051.000000  1051.000000  \n",
+       "mean     22.615604    29.360609   179.914367     5.063749  \n",
+       "std      10.210578    21.805031    71.059280     2.913471  \n",
+       "min       0.000000     0.000000     3.000000     1.000000  \n",
+       "25%      15.000000    18.000000   138.000000     2.000000  \n",
+       "50%      21.000000    27.000000   174.000000     5.000000  \n",
+       "75%      27.000000    36.000000   210.000000     8.000000  \n",
+       "max      90.000000   483.000000   789.000000    10.000000  "
       ]
      },
-     "execution_count": 24,
+     "execution_count": 286,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3877,7 +3857,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 82,
+   "execution_count": 287,
    "metadata": {},
    "outputs": [
     {
@@ -3886,7 +3866,7 @@
        "(1051, 17)"
       ]
      },
-     "execution_count": 82,
+     "execution_count": 287,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3904,32 +3884,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 38,
+   "execution_count": 288,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "AttributeError",
-     "evalue": "Can only use .str accessor with string values, which use np.object_ dtype in pandas",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
-      "\u001b[0;32m<ipython-input-38-9d9b646a4951>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mhouse_data\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'Land area'\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mhouse_data\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'Land area'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mstr\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mextract\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'(\\d+)'\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mastype\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mfloat\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;32m/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/generic.py\u001b[0m in \u001b[0;36m__getattr__\u001b[0;34m(self, name)\u001b[0m\n\u001b[1;32m   4370\u001b[0m         if (name in self._internal_names_set or name in self._metadata or\n\u001b[1;32m   4371\u001b[0m                 name in self._accessors):\n\u001b[0;32m-> 4372\u001b[0;31m             \u001b[0;32mreturn\u001b[0m \u001b[0mobject\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m__getattribute__\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mname\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   4373\u001b[0m         \u001b[0;32melse\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   4374\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_info_axis\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_can_hold_identifiers_and_holds_name\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mname\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;32m/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/accessor.py\u001b[0m in \u001b[0;36m__get__\u001b[0;34m(self, obj, cls)\u001b[0m\n\u001b[1;32m    131\u001b[0m             \u001b[0;31m# we're accessing the attribute of the class, i.e., Dataset.geo\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    132\u001b[0m             \u001b[0;32mreturn\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_accessor\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 133\u001b[0;31m         \u001b[0maccessor_obj\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_accessor\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mobj\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    134\u001b[0m         \u001b[0;31m# Replace the property with the accessor object. Inspired by:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    135\u001b[0m         \u001b[0;31m# http://www.pydanny.com/cached-property.html\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;32m/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/strings.py\u001b[0m in \u001b[0;36m__init__\u001b[0;34m(self, data)\u001b[0m\n\u001b[1;32m   1893\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1894\u001b[0m     \u001b[0;32mdef\u001b[0m \u001b[0m__init__\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mself\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mdata\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1895\u001b[0;31m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_validate\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1896\u001b[0m         \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_is_categorical\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mis_categorical_dtype\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdata\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1897\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
-      "\u001b[0;32m/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/strings.py\u001b[0m in \u001b[0;36m_validate\u001b[0;34m(data)\u001b[0m\n\u001b[1;32m   1915\u001b[0m             \u001b[0;31m# (instead of test for object dtype), but that isn't practical for\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1916\u001b[0m             \u001b[0;31m# performance reasons until we have a str dtype (GH 9343)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1917\u001b[0;31m             raise AttributeError(\"Can only use .str accessor with string \"\n\u001b[0m\u001b[1;32m   1918\u001b[0m                                  \u001b[0;34m\"values, which use np.object_ dtype in \"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1919\u001b[0m                                  \"pandas\")\n",
-      "\u001b[0;31mAttributeError\u001b[0m: Can only use .str accessor with string values, which use np.object_ dtype in pandas"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "house_data['Land area'] = house_data['Land area'].str.extract('(\\d+)').astype(float)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 84,
+   "execution_count": 289,
    "metadata": {},
    "outputs": [
     {
@@ -3955,7 +3919,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 84,
+     "execution_count": 289,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -3966,7 +3930,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 85,
+   "execution_count": 290,
    "metadata": {},
    "outputs": [
     {
@@ -4144,7 +4108,7 @@
        "4        9.0  "
       ]
      },
-     "execution_count": 85,
+     "execution_count": 290,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4162,7 +4126,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 86,
+   "execution_count": 291,
    "metadata": {},
    "outputs": [
     {
@@ -4384,7 +4348,7 @@
        "max     114.000000    90.000000   483.000000   789.000000    10.000000  "
       ]
      },
-     "execution_count": 86,
+     "execution_count": 291,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4397,7 +4361,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Notice Column 'Bathrooms' has only 1049 values, compared to 1051 values for other columns"
+    "#### Notice Column 'Bathrooms' has only 1049 values, compared to 1051 values for other columns\n",
+    "#### We'll explore to find best solution for the NaNs, whether the replace them with appropriate values, or remove them. "
    ]
   },
   {
@@ -4409,7 +4374,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 78,
+   "execution_count": 292,
    "metadata": {},
    "outputs": [
     {
@@ -4418,7 +4383,7 @@
        "True"
       ]
      },
-     "execution_count": 78,
+     "execution_count": 292,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4429,16 +4394,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 109,
+   "execution_count": 293,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "1"
+       "3"
       ]
      },
-     "execution_count": 109,
+     "execution_count": 293,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4449,7 +4414,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 68,
+   "execution_count": 294,
    "metadata": {},
    "outputs": [
     {
@@ -4475,7 +4440,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 68,
+     "execution_count": 294,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4486,7 +4451,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 89,
+   "execution_count": 295,
    "metadata": {},
    "outputs": [
     {
@@ -4592,7 +4557,7 @@
        "311         252        2.0  "
       ]
      },
-     "execution_count": 89,
+     "execution_count": 295,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4611,7 +4576,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 90,
+   "execution_count": 296,
    "metadata": {},
    "outputs": [
     {
@@ -6136,7 +6101,7 @@
        "[353 rows x 17 columns]"
       ]
      },
-     "execution_count": 90,
+     "execution_count": 296,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6147,7 +6112,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 91,
+   "execution_count": 297,
    "metadata": {},
    "outputs": [
     {
@@ -6156,7 +6121,7 @@
        "2.213675213675214"
       ]
      },
-     "execution_count": 91,
+     "execution_count": 297,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6167,7 +6132,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 96,
+   "execution_count": 298,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -6176,7 +6141,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 97,
+   "execution_count": 299,
    "metadata": {},
    "outputs": [
     {
@@ -6230,7 +6195,7 @@
        "Index: []"
       ]
      },
-     "execution_count": 97,
+     "execution_count": 299,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6241,7 +6206,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 102,
+   "execution_count": 300,
    "metadata": {},
    "outputs": [
     {
@@ -6371,7 +6336,7 @@
        "311         252        2.0  "
       ]
      },
-     "execution_count": 102,
+     "execution_count": 300,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6382,7 +6347,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 112,
+   "execution_count": 301,
    "metadata": {},
    "outputs": [
     {
@@ -6391,7 +6356,7 @@
        "False"
       ]
      },
-     "execution_count": 112,
+     "execution_count": 301,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6409,7 +6374,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 104,
+   "execution_count": 302,
    "metadata": {},
    "outputs": [
     {
@@ -6631,7 +6596,7 @@
        "max     114.000000    90.000000   483.000000   789.000000    10.000000  "
       ]
      },
-     "execution_count": 104,
+     "execution_count": 302,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6649,7 +6614,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 110,
+   "execution_count": 303,
    "metadata": {},
    "outputs": [
     {
@@ -6658,7 +6623,7 @@
        "1"
       ]
      },
-     "execution_count": 110,
+     "execution_count": 303,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6669,7 +6634,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 115,
+   "execution_count": 304,
    "metadata": {},
    "outputs": [
     {
@@ -6751,7 +6716,7 @@
        "568         156        9.0  "
       ]
      },
-     "execution_count": 115,
+     "execution_count": 304,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6764,12 +6729,12 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Column 'Suburbs' is missing. Drop this record."
+    "#### Column 'Suburbs' is missing. We decide to drop this record."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 118,
+   "execution_count": 305,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -6778,7 +6743,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 119,
+   "execution_count": 306,
    "metadata": {},
    "outputs": [
     {
@@ -7000,7 +6965,7 @@
        "max     114.000000    90.000000   483.000000   789.000000    10.000000  "
       ]
      },
-     "execution_count": 119,
+     "execution_count": 306,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7018,7 +6983,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 121,
+   "execution_count": 307,
    "metadata": {},
    "outputs": [
     {
@@ -7043,7 +7008,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
+   "execution_count": 308,
    "metadata": {},
    "outputs": [
     {
@@ -7067,26 +7032,26 @@
     {
      "data": {
       "text/plain": [
-       "array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f7b13214e80>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b14623c50>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b131a93c8>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b100b6630>],\n",
-       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7b13005710>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b02096780>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b020489e8>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b02079c18>],\n",
-       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7b02079c88>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01fe8160>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01f963c8>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01f4b630>],\n",
-       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01f7f898>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01f32b00>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01ee7d68>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7b01e9afd0>]],\n",
+       "array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcf3bef0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adce2a2b0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7add00b4a8>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7add137710>],\n",
+       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7adc936978>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adc911be0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcc04e48>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcbc60b8>],\n",
+       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcbc6128>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcbad5c0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcb60828>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcb13a90>],\n",
+       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7adcac9cf8>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adca7cf60>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adca34c50>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7adca67fd0>]],\n",
        "      dtype=object)"
       ]
      },
-     "execution_count": 120,
+     "execution_count": 308,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7109,22 +7074,22 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 32,
+   "execution_count": 309,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7b130a4860>"
+       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7adc6d69b0>"
       ]
      },
-     "execution_count": 32,
+     "execution_count": 309,
      "metadata": {},
      "output_type": "execute_result"
     },
     {
      "data": {
-      "image/png": "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\n",
+      "image/png": "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\n",
       "text/plain": [
        "<Figure size 432x288 with 1 Axes>"
       ]
@@ -7140,30 +7105,24 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 124,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/indexing.py:543: SettingWithCopyWarning: \n",
-      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
-      "Try using .loc[row_indexer,col_indexer] = value instead\n",
-      "\n",
-      "See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy\n",
-      "  self.obj[item] = s\n"
-     ]
-    }
-   ],
+   "source": [
+    "#### The CVs are skewed so we'll transform it with logarithm. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 310,
+   "metadata": {},
+   "outputs": [],
    "source": [
     "house_data.loc[:, 'logCV'] = np.log(house_data['CV'])"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 125,
+   "execution_count": 311,
    "metadata": {},
    "outputs": [
     {
@@ -7404,7 +7363,7 @@
        "max      16.705882  "
       ]
      },
-     "execution_count": 125,
+     "execution_count": 311,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7415,16 +7374,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 126,
+   "execution_count": 312,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7b131fed30>"
+       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7adcd35ef0>"
       ]
      },
-     "execution_count": 126,
+     "execution_count": 312,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7447,16 +7406,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 127,
+   "execution_count": 313,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7b01c26d68>"
+       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7adcea0710>"
       ]
      },
-     "execution_count": 127,
+     "execution_count": 313,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7478,45 +7437,33 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 128,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/indexing.py:362: SettingWithCopyWarning: \n",
-      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
-      "Try using .loc[row_indexer,col_indexer] = value instead\n",
-      "\n",
-      "See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy\n",
-      "  self.obj[key] = _infer_fill_value(value)\n",
-      "/anaconda/envs/azureml_py36/lib/python3.6/site-packages/pandas/core/indexing.py:543: SettingWithCopyWarning: \n",
-      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
-      "Try using .loc[row_indexer,col_indexer] = value instead\n",
-      "\n",
-      "See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy\n",
-      "  self.obj[item] = s\n"
-     ]
-    }
-   ],
+   "source": [
+    "#### We'll also transform the Land area values with logarithm as follows. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 314,
+   "metadata": {},
+   "outputs": [],
    "source": [
     "house_data.loc[:, 'log Land Area'] = np.log(house_data['Land area'])"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 130,
+   "execution_count": 315,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7b1b15f518>"
+       "<matplotlib.axes._subplots.AxesSubplot at 0x7f7ae01136d8>"
       ]
      },
-     "execution_count": 130,
+     "execution_count": 315,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7539,7 +7486,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 131,
+   "execution_count": 316,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -7548,7 +7495,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 132,
+   "execution_count": 317,
    "metadata": {},
    "outputs": [
     {
@@ -7572,17 +7519,26 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### The correlation between the numeric columns shows that: \n",
+    "- logCV is not very relevant with Latitue, Longitude, SA1, 40-49 years, C18_CURPop. We'll consider drop these columns in next steps. \n",
+    "- logCV seems negatively relevant to under 40 years, whereas positivaly relevant to over 50 years. We'll next aggregate all under 40 years, and all over 50 years. "
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 134,
+   "execution_count": 318,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<seaborn.axisgrid.PairGrid at 0x7f7aebeeb0b8>"
+       "<seaborn.axisgrid.PairGrid at 0x7f7ae04e9320>"
       ]
      },
-     "execution_count": 134,
+     "execution_count": 318,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7605,7 +7561,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 139,
+   "execution_count": 319,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -7614,7 +7570,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 140,
+   "execution_count": 320,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -7623,7 +7579,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 187,
+   "execution_count": 321,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -7632,7 +7588,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 142,
+   "execution_count": 322,
    "metadata": {},
    "outputs": [
     {
@@ -7657,16 +7613,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 143,
+   "execution_count": 323,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<seaborn.axisgrid.PairGrid at 0x7f7ae52e7cc0>"
+       "<seaborn.axisgrid.PairGrid at 0x7f7ad728cbe0>"
       ]
      },
-     "execution_count": 143,
+     "execution_count": 323,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -7689,7 +7645,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 188,
+   "execution_count": 324,
    "metadata": {},
    "outputs": [
     {
@@ -7838,7 +7794,7 @@
        "max        10.009648   477.000000   498.000000  "
       ]
      },
-     "execution_count": 188,
+     "execution_count": 324,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7848,8 +7804,15 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Remove the outlier with the maximum number of 'Bedrooms'"
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 189,
+   "execution_count": 325,
    "metadata": {},
    "outputs": [
     {
@@ -7867,7 +7830,7 @@
        "Name: 611, dtype: object"
       ]
      },
-     "execution_count": 189,
+     "execution_count": 325,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7878,7 +7841,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 191,
+   "execution_count": 326,
    "metadata": {},
    "outputs": [
     {
@@ -7966,7 +7929,7 @@
        "612       7.041412       72      54  "
       ]
      },
-     "execution_count": 191,
+     "execution_count": 326,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7985,7 +7948,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 190,
+   "execution_count": 327,
    "metadata": {},
    "outputs": [
     {
@@ -8059,7 +8022,7 @@
        "612       7.041412       72      54  "
       ]
      },
-     "execution_count": 190,
+     "execution_count": 327,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8070,7 +8033,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 194,
+   "execution_count": 328,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8079,7 +8042,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 195,
+   "execution_count": 329,
    "metadata": {},
    "outputs": [
     {
@@ -8153,7 +8116,7 @@
        "612       7.041412       72      54  "
       ]
      },
-     "execution_count": 195,
+     "execution_count": 329,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8164,7 +8127,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 196,
+   "execution_count": 330,
    "metadata": {},
    "outputs": [
     {
@@ -8313,7 +8276,7 @@
        "max        10.009648   477.000000   498.000000  "
       ]
      },
-     "execution_count": 196,
+     "execution_count": 330,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8324,7 +8287,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 152,
+   "execution_count": 331,
    "metadata": {},
    "outputs": [
     {
@@ -8342,7 +8305,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 152,
+     "execution_count": 331,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8360,7 +8323,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 197,
+   "execution_count": 332,
    "metadata": {},
    "outputs": [
     {
@@ -8430,7 +8393,7 @@
        "Name: Suburbs, Length: 1049, dtype: object"
       ]
      },
-     "execution_count": 197,
+     "execution_count": 332,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8441,7 +8404,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 198,
+   "execution_count": 333,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8450,7 +8413,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 199,
+   "execution_count": 334,
    "metadata": {},
    "outputs": [
     {
@@ -8459,7 +8422,7 @@
        "array([  0,   1,   1, ...,  54,  35, 107])"
       ]
      },
-     "execution_count": 199,
+     "execution_count": 334,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8470,7 +8433,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 200,
+   "execution_count": 335,
    "metadata": {},
    "outputs": [
     {
@@ -8484,7 +8447,7 @@
        "      dtype='object', length=189)"
       ]
      },
-     "execution_count": 200,
+     "execution_count": 335,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8495,7 +8458,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 201,
+   "execution_count": 336,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8504,7 +8467,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 202,
+   "execution_count": 337,
    "metadata": {},
    "outputs": [
     {
@@ -8662,7 +8625,7 @@
        "max        10.009648   477.000000   498.000000   188.000000  "
       ]
      },
-     "execution_count": 202,
+     "execution_count": 337,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8673,7 +8636,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 203,
+   "execution_count": 338,
    "metadata": {},
    "outputs": [
     {
@@ -8692,7 +8655,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 203,
+     "execution_count": 338,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8703,7 +8666,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 204,
+   "execution_count": 339,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8712,7 +8675,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 205,
+   "execution_count": 340,
    "metadata": {},
    "outputs": [
     {
@@ -8730,7 +8693,7 @@
        "dtype: object"
       ]
      },
-     "execution_count": 205,
+     "execution_count": 340,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8749,7 +8712,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 206,
+   "execution_count": 341,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8759,7 +8722,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 207,
+   "execution_count": 342,
    "metadata": {},
    "outputs": [
     {
@@ -8768,7 +8731,7 @@
        "(839, 8)"
       ]
      },
-     "execution_count": 207,
+     "execution_count": 342,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8779,7 +8742,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 208,
+   "execution_count": 343,
    "metadata": {},
    "outputs": [
     {
@@ -8788,7 +8751,7 @@
        "(210, 8)"
       ]
      },
-     "execution_count": 208,
+     "execution_count": 343,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8799,7 +8762,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 209,
+   "execution_count": 344,
    "metadata": {},
    "outputs": [
     {
@@ -8808,7 +8771,7 @@
        "(839,)"
       ]
      },
-     "execution_count": 209,
+     "execution_count": 344,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8819,7 +8782,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 210,
+   "execution_count": 345,
    "metadata": {},
    "outputs": [
     {
@@ -8828,7 +8791,7 @@
        "(210,)"
       ]
      },
-     "execution_count": 210,
+     "execution_count": 345,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8839,7 +8802,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 211,
+   "execution_count": 346,
    "metadata": {},
    "outputs": [
     {
@@ -8849,7 +8812,7 @@
        "         normalize=False)"
       ]
      },
-     "execution_count": 211,
+     "execution_count": 346,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8862,7 +8825,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 212,
+   "execution_count": 347,
    "metadata": {},
    "outputs": [
     {
@@ -8872,7 +8835,7 @@
        "       -0.00089732,  0.00275075, -0.00070807])"
       ]
      },
-     "execution_count": 212,
+     "execution_count": 347,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8883,7 +8846,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 213,
+   "execution_count": 348,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -8892,16 +8855,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 214,
+   "execution_count": 349,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.collections.PathCollection at 0x7f7ae05412e8>"
+       "<matplotlib.collections.PathCollection at 0x7f7ae8d46b00>"
       ]
      },
-     "execution_count": 214,
+     "execution_count": 349,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -8924,7 +8887,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 215,
+   "execution_count": 350,
    "metadata": {},
    "outputs": [
     {
@@ -8933,7 +8896,7 @@
        "0.3378605753608946"
       ]
      },
-     "execution_count": 215,
+     "execution_count": 350,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8951,7 +8914,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 216,
+   "execution_count": 351,
    "metadata": {},
    "outputs": [
     {
@@ -8975,19 +8938,19 @@
     {
      "data": {
       "text/plain": [
-       "array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae04f3240>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae04a0208>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae04d0470>],\n",
-       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae04816d8>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae0431940>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae03e2ba8>],\n",
-       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae0415e10>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae03d2080>,\n",
-       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ae03d20f0>]],\n",
+       "array([[<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad4666048>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad466ef28>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad41532e8>],\n",
+       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad4103630>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad40b59b0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad40e7d30>],\n",
+       "       [<matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad40a70f0>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad4056438>,\n",
+       "        <matplotlib.axes._subplots.AxesSubplot object at 0x7f7ad40564a8>]],\n",
        "      dtype=object)"
       ]
      },
-     "execution_count": 216,
+     "execution_count": 351,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -9010,7 +8973,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 217,
+   "execution_count": 352,
    "metadata": {},
    "outputs": [
     {
@@ -9035,16 +8998,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 218,
+   "execution_count": 353,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<seaborn.axisgrid.PairGrid at 0x7f7ae054a5c0>"
+       "<seaborn.axisgrid.PairGrid at 0x7f7ad3f5c128>"
       ]
      },
-     "execution_count": 218,
+     "execution_count": 353,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -9066,8 +9029,15 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Consider to drop the columns 'C18_CURPop', 'Over50', and 'Suburb id'. "
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 242,
+   "execution_count": 354,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -9076,7 +9046,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 243,
+   "execution_count": 355,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -9085,7 +9055,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 244,
+   "execution_count": 356,
    "metadata": {},
    "outputs": [
     {
@@ -9095,7 +9065,7 @@
        "         normalize=False)"
       ]
      },
-     "execution_count": 244,
+     "execution_count": 356,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9107,7 +9077,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 245,
+   "execution_count": 357,
    "metadata": {},
    "outputs": [
     {
@@ -9117,7 +9087,7 @@
        "       -0.00089732,  0.00275075, -0.00070807])"
       ]
      },
-     "execution_count": 245,
+     "execution_count": 357,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9128,7 +9098,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 246,
+   "execution_count": 358,
    "metadata": {},
    "outputs": [
     {
@@ -9137,7 +9107,7 @@
        "0.3386526186781357"
       ]
      },
-     "execution_count": 246,
+     "execution_count": 358,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9148,7 +9118,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 247,
+   "execution_count": 359,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -9157,16 +9127,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 248,
+   "execution_count": 360,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.collections.PathCollection at 0x7f7add725b70>"
+       "<matplotlib.collections.PathCollection at 0x7f7ad1c20f98>"
       ]
      },
-     "execution_count": 248,
+     "execution_count": 360,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -9188,8 +9158,15 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### The model fits generally ok when logCV falls below 15.5, but downgraded severely when logCV exceedes 16."
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 254,
+   "execution_count": 361,
    "metadata": {},
    "outputs": [
     {
@@ -9241,6 +9218,15 @@
        "      <td>45</td>\n",
        "    </tr>\n",
        "    <tr>\n",
+       "      <th>266</th>\n",
+       "      <td>6</td>\n",
+       "      <td>3.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>15.671809</td>\n",
+       "      <td>6.400257</td>\n",
+       "      <td>48</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
        "      <th>306</th>\n",
        "      <td>2</td>\n",
        "      <td>2.0</td>\n",
@@ -9248,6 +9234,69 @@
        "      <td>16.705882</td>\n",
        "      <td>4.812184</td>\n",
        "      <td>27</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>421</th>\n",
+       "      <td>5</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>15.761421</td>\n",
+       "      <td>7.599902</td>\n",
+       "      <td>87</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>441</th>\n",
+       "      <td>4</td>\n",
+       "      <td>3.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>15.687313</td>\n",
+       "      <td>7.467371</td>\n",
+       "      <td>75</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>572</th>\n",
+       "      <td>5</td>\n",
+       "      <td>6.0</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>15.702580</td>\n",
+       "      <td>7.726654</td>\n",
+       "      <td>72</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>582</th>\n",
+       "      <td>4</td>\n",
+       "      <td>5.0</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>15.671809</td>\n",
+       "      <td>6.463029</td>\n",
+       "      <td>57</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>591</th>\n",
+       "      <td>6</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>5.0</td>\n",
+       "      <td>15.640060</td>\n",
+       "      <td>6.408529</td>\n",
+       "      <td>57</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>593</th>\n",
+       "      <td>6</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>15.555977</td>\n",
+       "      <td>5.950643</td>\n",
+       "      <td>33</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>839</th>\n",
+       "      <td>3</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>9.0</td>\n",
+       "      <td>15.538277</td>\n",
+       "      <td>6.921658</td>\n",
+       "      <td>99</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1029</th>\n",
@@ -9275,32 +9324,40 @@
        "      Bedrooms  Bathrooms  NZDep2018      logCV  log Land Area  Under40\n",
        "183          4        4.0        1.0  16.012735       7.907652       45\n",
        "184          4        4.0        1.0  16.012735       7.907652       45\n",
+       "266          6        3.0        1.0  15.671809       6.400257       48\n",
        "306          2        2.0        4.0  16.705882       4.812184       27\n",
+       "421          5        4.0        1.0  15.761421       7.599902       87\n",
+       "441          4        3.0        1.0  15.687313       7.467371       75\n",
+       "572          5        6.0        1.0  15.702580       7.726654       72\n",
+       "582          4        5.0        4.0  15.671809       6.463029       57\n",
+       "591          6        4.0        5.0  15.640060       6.408529       57\n",
+       "593          6        4.0        2.0  15.555977       5.950643       33\n",
+       "839          3        1.0        9.0  15.538277       6.921658       99\n",
        "1029         6        4.0        1.0  16.321036       8.026824       87\n",
        "1039         5        6.0        1.0  16.341239       8.178919       57"
       ]
      },
-     "execution_count": 254,
+     "execution_count": 361,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "smaller_data[smaller_data['logCV']>16]"
+    "smaller_data[smaller_data['logCV']>15.5]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 255,
+   "execution_count": 362,
    "metadata": {},
    "outputs": [],
    "source": [
-    "smaller_data = smaller_data[smaller_data['logCV'] < 16]"
+    "smaller_data = smaller_data[smaller_data['logCV'] < 15.5]"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 256,
+   "execution_count": 363,
    "metadata": {},
    "outputs": [
     {
@@ -9335,30 +9392,30 @@
        "  <tbody>\n",
        "    <tr>\n",
        "      <th>count</th>\n",
-       "      <td>1044.000000</td>\n",
-       "      <td>1044.000000</td>\n",
-       "      <td>1044.000000</td>\n",
-       "      <td>1044.000000</td>\n",
-       "      <td>1044.000000</td>\n",
-       "      <td>1044.000000</td>\n",
+       "      <td>1036.000000</td>\n",
+       "      <td>1036.000000</td>\n",
+       "      <td>1036.000000</td>\n",
+       "      <td>1036.000000</td>\n",
+       "      <td>1036.000000</td>\n",
+       "      <td>1036.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>mean</th>\n",
-       "      <td>3.765326</td>\n",
-       "      <td>2.059796</td>\n",
-       "      <td>5.075670</td>\n",
-       "      <td>13.944581</td>\n",
-       "      <td>6.231499</td>\n",
-       "      <td>103.905172</td>\n",
+       "      <td>3.756757</td>\n",
+       "      <td>2.046745</td>\n",
+       "      <td>5.091699</td>\n",
+       "      <td>13.931384</td>\n",
+       "      <td>6.226589</td>\n",
+       "      <td>104.197876</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>std</th>\n",
-       "      <td>1.091897</td>\n",
-       "      <td>0.964548</td>\n",
-       "      <td>2.909472</td>\n",
-       "      <td>0.544429</td>\n",
-       "      <td>0.925632</td>\n",
-       "      <td>54.131827</td>\n",
+       "      <td>1.087790</td>\n",
+       "      <td>0.948850</td>\n",
+       "      <td>2.905316</td>\n",
+       "      <td>0.525267</td>\n",
+       "      <td>0.925906</td>\n",
+       "      <td>54.208850</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>min</th>\n",
@@ -9375,7 +9432,7 @@
        "      <td>1.000000</td>\n",
        "      <td>2.000000</td>\n",
        "      <td>13.567049</td>\n",
-       "      <td>5.764406</td>\n",
+       "      <td>5.751778</td>\n",
        "      <td>72.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
@@ -9383,8 +9440,8 @@
        "      <td>4.000000</td>\n",
        "      <td>2.000000</td>\n",
        "      <td>5.000000</td>\n",
-       "      <td>13.892472</td>\n",
-       "      <td>6.343880</td>\n",
+       "      <td>13.887831</td>\n",
+       "      <td>6.339477</td>\n",
        "      <td>96.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
@@ -9392,8 +9449,8 @@
        "      <td>4.000000</td>\n",
        "      <td>3.000000</td>\n",
        "      <td>8.000000</td>\n",
-       "      <td>14.285514</td>\n",
-       "      <td>6.708998</td>\n",
+       "      <td>14.269766</td>\n",
+       "      <td>6.707168</td>\n",
        "      <td>126.000000</td>\n",
        "    </tr>\n",
        "    <tr>\n",
@@ -9401,7 +9458,7 @@
        "      <td>9.000000</td>\n",
        "      <td>7.000000</td>\n",
        "      <td>10.000000</td>\n",
-       "      <td>15.761421</td>\n",
+       "      <td>15.483217</td>\n",
        "      <td>10.009648</td>\n",
        "      <td>477.000000</td>\n",
        "    </tr>\n",
@@ -9411,19 +9468,19 @@
       ],
       "text/plain": [
        "          Bedrooms    Bathrooms    NZDep2018        logCV  log Land Area  \\\n",
-       "count  1044.000000  1044.000000  1044.000000  1044.000000    1044.000000   \n",
-       "mean      3.765326     2.059796     5.075670    13.944581       6.231499   \n",
-       "std       1.091897     0.964548     2.909472     0.544429       0.925632   \n",
+       "count  1036.000000  1036.000000  1036.000000  1036.000000    1036.000000   \n",
+       "mean      3.756757     2.046745     5.091699    13.931384       6.226589   \n",
+       "std       1.087790     0.948850     2.905316     0.525267       0.925906   \n",
        "min       1.000000     1.000000     1.000000    12.506177       3.688879   \n",
-       "25%       3.000000     1.000000     2.000000    13.567049       5.764406   \n",
-       "50%       4.000000     2.000000     5.000000    13.892472       6.343880   \n",
-       "75%       4.000000     3.000000     8.000000    14.285514       6.708998   \n",
-       "max       9.000000     7.000000    10.000000    15.761421      10.009648   \n",
+       "25%       3.000000     1.000000     2.000000    13.567049       5.751778   \n",
+       "50%       4.000000     2.000000     5.000000    13.887831       6.339477   \n",
+       "75%       4.000000     3.000000     8.000000    14.269766       6.707168   \n",
+       "max       9.000000     7.000000    10.000000    15.483217      10.009648   \n",
        "\n",
        "           Under40  \n",
-       "count  1044.000000  \n",
-       "mean    103.905172  \n",
-       "std      54.131827  \n",
+       "count  1036.000000  \n",
+       "mean    104.197876  \n",
+       "std      54.208850  \n",
        "min       0.000000  \n",
        "25%      72.000000  \n",
        "50%      96.000000  \n",
@@ -9431,7 +9488,7 @@
        "max     477.000000  "
       ]
      },
-     "execution_count": 256,
+     "execution_count": 363,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9442,7 +9499,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 257,
+   "execution_count": 364,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -9451,16 +9508,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 258,
+   "execution_count": 365,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "(835, 5)"
+       "(828, 5)"
       ]
      },
-     "execution_count": 258,
+     "execution_count": 365,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9471,7 +9528,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 259,
+   "execution_count": 366,
    "metadata": {},
    "outputs": [
     {
@@ -9481,7 +9538,7 @@
        "         normalize=False)"
       ]
      },
-     "execution_count": 259,
+     "execution_count": 366,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9493,16 +9550,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 260,
+   "execution_count": 367,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "0.36419920483251833"
+       "0.4159982433321042"
       ]
      },
-     "execution_count": 260,
+     "execution_count": 367,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -9513,7 +9570,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 261,
+   "execution_count": 368,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -9522,22 +9579,22 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 262,
+   "execution_count": 369,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "<matplotlib.collections.PathCollection at 0x7f7add697470>"
+       "<matplotlib.collections.PathCollection at 0x7f7ad1b76400>"
       ]
      },
-     "execution_count": 262,
+     "execution_count": 369,
      "metadata": {},
      "output_type": "execute_result"
     },
     {
      "data": {
-      "image/png": "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\n",
+      "image/png": "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\n",
       "text/plain": [
        "<Figure size 432x288 with 1 Axes>"
       ]
@@ -9550,6 +9607,21 @@
    ],
    "source": [
     "plt.scatter(test_y, predicted)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### We've seen the performance of the model improving. However, the score is still lower than 0.4. \n",
+    "### Next step would be setting the CV or logCV values in appropriate bins, and try the model to predict the CV or log CV values to correct bins.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Other options are trying other machine learning models, such as neural networks, and further compare the performance of different models. "
    ]
   },
   {
